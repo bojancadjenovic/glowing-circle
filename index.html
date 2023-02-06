@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Circle</title>
+</head>
+<style>
+	body {
+	background-color: #050210;
+	background-size: 100%;
+	margin: 0;
+}
+
+#object {
+	position: relative; 
+	width: 400px;
+	height: 400px;
+    top: 200px; 
+	margin: 0 auto;
+	border-radius: 50%;
+	background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+	animation: animate 1s linear infinite;
+}
+
+#object span {
+	position: absolute; 
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+}
+
+#object span:nth-child(1) {
+	filter: blur(25px);
+}
+
+#object span:nth-child(2) {
+	filter: blur(15px);
+}
+
+#object span:nth-child(3) {
+	filter: blur(15px);
+}
+
+#object span:nth-child(4) {
+	filter: blur(15px);
+}
+#object ::before {
+	background: #0e081c;
+	border-radius: 50%;
+	content: '';
+	position: absolute;
+	top: 15px; 
+	left: 15px; 
+	right: 15px; 
+	bottom: 15px; 
+	z-index:1;
+	animation: pulse 3s infinite;
+	filter: blur(25px);
+}
+
+#object:after {
+	background: #070707;
+	border-radius: 50%;
+	content:'';
+	position: absolute; 
+	top: 15px; 
+	left: 15px; 
+	right: 15px; 
+	bottom: 15px; 
+	scale: 1;
+	filter: blur(25);
+}
+@keyframes pulse {
+	0% {scale: 0;}
+	50% {scale: 0,9;}
+	100% {scale: 1px;;}
+}
+
+@keyframes animate {
+	0% {
+		transform: rotate(0deg); }
+	100% {
+		transform: rotate(360deg); }
+}
+@keyframes animate {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+</style>
+
+<body>
+	
+
+	
+<div id="main_div">
+
+	
+<div id="object">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+</div>	
+	
+</div>
+</body>
+</html>
